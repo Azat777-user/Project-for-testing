@@ -89,7 +89,7 @@ select {
     font-size: 16px;
     font-weight: 400;
     line-height: 19.36px;
-    padding-left: 0 25px;
+    padding-left: 0px 25px;
 }
 
 .label {
@@ -97,7 +97,6 @@ select {
     font-size: 16px;
     font-weight: 400;
     line-height: 19.36px;
-    ;
 }
 
 .text-field {
