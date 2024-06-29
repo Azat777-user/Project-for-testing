@@ -78,7 +78,7 @@ select {
 .frameworks-list {
     /* Стили для маркированного списка во второй секции */
     list-style-image: url(../assets/images/solar_map-arrow-up-bold.svg);
-    padding-left: 25px;
+    padding: 0px 25px;
     font-size: 16px;
     font-weight: 400;
     line-height: 19.36px;
