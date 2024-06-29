@@ -76,7 +76,7 @@ select {
     margin-bottom: 25px;
 }
 
-.frameworks-list {
+.skills-list {
     /* Стили для маркированного списка во второй секции */
     list-style-image: url(../assets/images/solar_map-arrow-up-bold.svg);
     padding: 0px 25px;
