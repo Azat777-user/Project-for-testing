@@ -47,7 +47,7 @@ header span {
 
 .text-wrapper {
     /* 📍 Cвойство для ограничения ширины блока с текстом в первой секции */
-    max-width: 420px;
+    max-width: 425px;
 }
 
 .main-title {
@@ -74,7 +74,7 @@ header span {
     /* 📍 Свойствa flexbox для отступов между элементами select, .info-wrapper и .skills-wrapper  */
     display:flex;
     flex-flow: row nowrap;
-    
+    gap: 60px;
 }
 
 .skills-wrapper{border: 1px solid red;}
@@ -101,6 +101,8 @@ select:hover,
 .info-wrapper {
     /* 📍 Свойство flexbox для расположения 2-х списков в ряд */
     border: 1px solid red;
+    display: flex;
+    flex-direction: row;
 }
 
 .section-title {
@@ -118,6 +120,7 @@ select:hover,
 .frameworks-list,
 .books-list {
     /* 📍 Свойства flexbox для отступов между элементами в списках */
+    gap: 16px;
 }
 
 .frameworks-list {
@@ -129,10 +132,12 @@ select:hover,
 
 .skills-block {
     /* 📍 Свойства flexbox для расположения формы над элементами с классом .label */
+    flex-direction: column-reverse;
 }
 
 .skills {
     /* 📍 Свойства flexbox для расположения элементов с классом .label */
+    gap: 20px;
 }
 
 .books-list {
@@ -198,7 +203,7 @@ footer {
     background-color: rgba(163, 167, 255, 0.3);
     padding: 26px 0;
     /* 📍 Свойство для расположения ссылки горизонтально по центру */
-    justify-content: center;
+    text-align: center;
 }
 
 .footer-link {
