@@ -257,7 +257,7 @@ footer {
 @media screen and (max-width: 576px) {
     .main-section {
         /* 📍 Внутренние отступы сверху и снизу */
-        padding-bottom: 30px 0px 60px;
+        padding: 30px 0px 60px;
     }
 
     .main-section .wrapper {
