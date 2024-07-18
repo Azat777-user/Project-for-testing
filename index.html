@@ -1,489 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>It-incubator precourse</title>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <span>IT-INCUBATOR</span>
-        </div>
-    </header>
-
-    <section class="main-section" data-cy="hw-4-section-main-pre">
-        <div class="container">
-            <div class="wrapper" data-cy="hw-4-section-main-wrapper-pre">
-                <div class="text-wrapper" data-cy="hw-4-text-wrapper-pre">
-                    <h1 class="main-title" data-cy="hw-4-main-title">Иванов Иван Иванович</h1>
-                    <p class="main-text">Работаю в IT-INCUBATOR-е. Люблю HTML, CSS и все, что связано с frontend разработкой.</p>
-                </div>
-                <img class="main-image" data-cy="hw-4-main-image" src="https://abbtech.az/storage/uploads/files/1687508692_1615533694-frontendd.svg" alt="">
-            </div>
-        </div>
+<html lang="ru">
+  <link>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/lesson-8.css">
+    <link rel="stylesheet" href="styles/lesson-10.css">
+    <title>Основы Frontend c нуля ✨</title>
+  </head>
+  <body>
+    <!-- ! Для успешного прохождения автоматической проверки не стоит менять/удалять id и классы элементов  -->
+    <section>
+      <h2>Урок 6, взаимодействие с веб-страницей</h2>
+      <img
+        id="web-tech-image"
+        src="https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/32f74d50-68d0-46aa-b035-7b3a5300d2c1_js-magic-logo.jpg"
+        alt="generated logo"
+        width="150"
+        height="150"
+      />
+      <div>
+        <button id="prev-button">prev</button>
+        <button id="next-button">next</button>
+      </div>
     </section>
 
-    <section class="about-section" data-cy="hw-4-section-about-pre">
-        <div class="container">
-            <div class="wrapper" data-cy="hw-4-section-about-wrapper-pre">
-                <select name="" id="">
-                    <option value="">Paris</option>
-                    <option value="" selected>Minsk</option>
-                    <option value="">Milan</option>
-                </select>
-        
-                <div class="info-wrapper" data-cy="hw-4-info-wrapper-pre">
-                    <div class="frameworks">
-                        <h2 class="section-title">Любимые фреймворки</h2>
-                        <ul class="frameworks-list">
-                            <li>React</li>
-                            <li>Angular</li>
-                            <li>Vue</li>
-                        </ul>
-                    </div>
-                    <div class="books" data-cy="hw-4-books-pre">
-                        <h2 class="section-title">Рейтинг любимых книг</h2>
-                        <ol class="books-list">
-                            <li>HTML5+CSS3. Основы современного web-дизайна</li>
-                            <li>HTML5, CSS3 и JavaScript. Исчерпывающее руководство</li>
-                            <li>HTML5+CSS3. Разработка сайтов для любых браузеров и устройств. 2-е издание</li>
-                        </ol>
-                    </div>
-                </div>
-                
-                <div class="skills-wrapper">
-                    <h2 class="section-title">Мои скиллы</h2>
-    
-                    <div class="skills-block">
-                        <div class="skills">
-                            <label class="label" for="1">
-                                <input type="checkbox" checked name="" id="1">
-                                HTML5
-                            </label>
-                    
-                            <label class="label" for="2">
-                                <input type="checkbox" checked name="" id="2">
-                                CSS3
-                            </label>
-                    
-                            <label class="label" for="3">
-                                <input type="checkbox" name="" id="3">
-                                JavaScript
-                            </label>
-                    
-                            <label class="label" for="4">
-                                <input type="checkbox" name="" id="4">
-                                Jquery
-                            </label>
-                    
-                            <label class="label" for="5">
-                                <input type="checkbox" name="" id="5">
-                                React
-                            </label>
-                        </div>
-        
-                        <form>
-                            <input class="text-field" type="text" placeholder="Новый скилл">
-                            <button class="btn">Добавить</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+    <section>
+      <h2>Урок 8, обработка событий</h2>
+      <h3>Задание 1. Магазин питомцев</h3>
+      <div class="pet-shop">
 
-            <hr class="line">
-    
-            <table border="1">
-                <tr>
-                    <th>п/п</th>
-                    <th>Наименование</th>
-                    <th>Количество</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Монитор</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Клавиатура</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Мышь</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td colspan="2">Итого:</td>
-                    <td>4</td>
-                </tr>
-            </table>
-        </div>
+      </div>
+      <div class="cart">
+        <p>Ваша корзина:</p>
+        <ul id="cart-list"></ul>
+        <button id="clear-cart-button">✖ Очистить корзину</button>
+        <div id="message-box"></div>
+      </div>
+
+      <h3>Задание 2. Запуск ракеты</h3>
+      <button id="start">Старт</button>
+      <button id="cancel">Отмена</button>
+      <p id="countdown">Готовы?</p>
     </section>
 
-    <footer>
-        <a class="footer-link" href="https://it-incubator.io/">it-incubator</a>
-    </footer>
-</body>
+    <section class="lesson-10">
+      <h2>Урок 10, паттерн MVC</h2>
+      <form class="form">
+        <label>Название фильма
+          <input class="input-title" type="text" placeholder="Унесённые призраками">
+        </label>
+        <label for="movie-description">
+          Описание фильма
+        </label>
+        <textarea id="movie-description" class="input-description" placeholder="Тихиро с мамой и папой переезжает в новый дом..."></textarea>
+
+        <button type="submit">Добавить фильм</button>
+      </form>
+      <div class="message-box"></div>
+      <ul class="list"></ul>
+    </section>
+
+    <script src="lesson-01/01.js" type="module"></script>
+    <script src="lesson-01/02.js" type="module"></script>
+    <script src="lesson-01/03.js" type="module"></script>
+    <script src="lesson-02/01.js" type="module"></script>
+    <script src="lesson-02/02.js" type="module"></script>
+    <script src="lesson-02/03.js" type="module"></script>
+    <script src="lesson-03/01.js" type="module"></script>
+    <script src="lesson-03/02.js" type="module"></script>
+    <script src="lesson-03/03.js" type="module"></script>
+    <script src="lesson-04/01.js"></script>
+    <script src="lesson-04/02.js" type="module"></script>
+    <script src="lesson-04/03.js" type="module"></script>
+    <script src="lesson-04/04.js" type="module"></script>
+    <script src="lesson-05/01.js" type="module"></script>
+    <script src="lesson-05/02.js" type="module"></script>
+    <script src="lesson-06/01.js" type="module"></script>
+    <script src="lesson-07/01.js" type="module"></script>
+    <script src="lesson-07/02.js" type="module"></script>
+    <script src="lesson-07/03.js" type="module"></script>
+    <script src="lesson-08/01.js" type="module"></script>
+    <script src="lesson-08/02.js" type="module"></script>
+    <script src="lesson-09/01.js" type="module"></script>
+    <script src="lesson-09/02.js" type="module"></script>
+    <script src="lesson-10/01.js" type="module"></script>
+  </body>
 </html>
-
-
-
-
-<!-- <!DOCTYPE html>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.container {
-    outline: 1px solid red; /* чтобы контейнер был виден, в конце можно будет удалить это св-во */
-    margin: 0 auto;
-    width: 100%;
-    /* 📍 Максимальная ширина для контейнера */
-    max-width: 1140px;
-}
-
-body {
-    font-family: "Inter", sans-serif;
-    color: #303030;
-}
-
-header {
-    background-color: #2965F1;
-    padding: 23px 0;
-}
-
-header span {
-    font-weight: 700;
-    font-size: 20px;
-    color: #fff;
-}
-
-.main-section {
-    background-color: #fafaff;
-    padding: 60px 0;
-    min-height: 100vh;
-    /* 📍 Свойства flexbox для размещения container-a вертикально по центру */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.main-section .wrapper {
-    /* 📍 Свойствa flexbox для размещения блока с текстом и изображения в ряд, и центрирования их по вертикали */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.text-wrapper {
-    /* 📍 Cвойство для ограничения ширины блока с текстом в первой секции */
-    max-width: 425px;
-}
-
-.main-title {
-    font-weight: 700;
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.main-text {
-    font-weight: 400;
-    font-size: 18px;
-}
-
-.main-image {
-    max-width: 715px;
-}
-
-.about-section {
-    background-color: #fff;
-    padding: 100px 0;
-}
-
-.about-section .wrapper {
-    /* 📍 Свойствa flexbox для отступов между элементами select, .info-wrapper и .skills-wrapper  */
-    display:flex;
-    flex-flow: row nowrap;
-    gap: 60px;
-}
-
-.skills-wrapper{border: 1px solid red;}
-
-select {
-    border: 1px solid rgba(48, 48, 48, 0.3);
-    border-radius: 5px;
-    width: 150px;
-    padding: 8px 12px;
-    font-weight: 400;
-    font-size: 16px;
-    appearance: none; 
-    background-image: url("./ep_arrow-down.svg");
-    background-repeat: no-repeat;
-    background-position: right 12px top 50%;
-}
-
-select:hover,
-.text-field:hover {
-    /* 📍 Стили для выпадающего списка и текстового поля при наведении курсора */
-}
-
-
-.info-wrapper {
-    /* 📍 Свойство flexbox для расположения 2-х списков в ряд */
-    border: 1px solid red;
-    display: flex;
-    flex-direction: row;
-}
-
-.section-title {
-    font-weight: 700;
-    font-size: 24px;
-    margin-bottom: 25px;
-}
-
-.frameworks,
-.books {
-    min-width: 50%;
-    border: 1px solid red;
-}
-
-.frameworks-list,
-.books-list {
-    /* 📍 Свойства flexbox для отступов между элементами в списках */
-    gap: 16px;
-}
-
-.frameworks-list {
-    font-weight: 400;
-    font-size: 16px;
-    list-style-image: url(./solar_map-arrow-up-bold.svg);
-    padding-left: 20px;
-}
-
-.skills-block {
-    /* 📍 Свойства flexbox для расположения формы над элементами с классом .label */
-    flex-direction: column-reverse;
-}
-
-.skills {
-    /* 📍 Свойства flexbox для расположения элементов с классом .label */
-    gap: 20px;
-}
-
-.books-list {
-    font-weight: 400;
-    font-size: 16px;
-    padding-left: 20px;
-}
-
-.label {
-    font-weight: 400;
-    font-size: 16px;
-}
-
-form {
-    margin-bottom: 40px;
-}
-
-.text-field {
-    border: 1px solid rgba(48, 48, 48, 0.3);
-    border-radius: 5px;
-    max-width: 330px;
-    width: 100%;
-    height: 36px;
-    background-color: rgba(255, 255, 255, 0);
-    padding: 8px 12px;
-    font-weight: 400;
-    font-size: 16px;
-}
-
-.btn {
-    border: none;
-    border-radius: 5px;
-    width: 125px;
-    height: 36px;
-    background-color: #2965f1;
-    font-weight: 700;
-    font-size: 14px;
-    color: #fff;
-}
-
-.btn:hover {
-    /* 📍 Стили для кнопки при наведении курсора */
-    cursor: pointer;
-}
-
-.line {
-    margin: 60px 0;
-}
-
-table {
-    border: 1px solid #95a1bb;
-    border-collapse: collapse;
-    font-weight: 400;
-    font-size: 14px;
-    margin: 0 auto;
-}
-
-th, td {
-    padding: 12px 15px;
-}
-
-footer {
-    background-color: rgba(163, 167, 255, 0.3);
-    padding: 26px 0;
-    /* 📍 Свойство для расположения ссылки горизонтально по центру */
-    text-align: center;
-}
-
-.footer-link {
-    font-weight: 400;
-    font-size: 14px;
-    color: #2965f1;
-    text-decoration: none;
-}
-
-.footer-link:hover {
-    /* 📍 Стили для ссылки при наведении курсора */
-    cursor: pointer;
-}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>It-incubator precourse</title>
-</head>
-<body data-cy="hw3-body-pre">
-    <header data-cy="hw3-header">
-        <div class="container">
-            <span data-cy="hw3-header-span">IT-INCUBATOR</span>
-        </div>
-    </header>
-
-    <section class="main-section" data-cy="hw3-section-main-pre">
-        <div class="container">
-            <div class="wrapper">
-                <div class="text-wrapper" data-cy="hw3-text-wrapper-pre">
-                    <h1 class="main-title" data-cy="hw3-main-title">Иванов Иван Иванович</h1>
-                    <p class="main-text" data-cy="hw3-text">Работаю в IT-INCUBATOR-е. Люблю HTML, CSS и все, что связано с frontend разработкой.</p>
-                </div>
-                <img class="main-image" data-cy="hw3-main-image" src="https://abbtech.az/storage/uploads/files/1687508692_1615533694-frontendd.svg" alt="">
-            </div>
-        </div>
-    </section>
-
-    <section class="about-section" data-cy="hw3-section-about-pre">
-        <div class="container">
-            <div class="wrapper">
-                <select data-cy="hw3-select-pre" name="" id="">
-                    <option value="">Paris</option>
-                    <option value="" selected>Minsk</option>
-                    <option value="">Milan</option>
-                </select>
-        
-                <div class="info-wrapper" data-cy="hw3-info-wrapper-pre">
-                    <div class="frameworks" data-cy="hw3-frameworks-pre">
-                        <h2 class="section-title" data-cy="hw3-section-title-pre">Любимые фреймворки</h2>
-                        <ul class="frameworks-list" data-cy="hw3-frameworks-list-pre">
-                            <li>React</li>
-                            <li>Angular</li>
-                            <li>Vue</li>
-                        </ul>
-                    </div>
-                    <div class="books" data-cy="hw3-books-pre">
-                        <h2 class="section-title" data-cy="hw3-section-title-pre">Рейтинг любимых книг</h2>
-                        <ol class="books-list" data-cy="hw3-books-list-pre">
-                            <li>HTML5+CSS3. Основы современного web-дизайна</li>
-                            <li>HTML5, CSS3 и JavaScript. Исчерпывающее руководство</li>
-                            <li>HTML5+CSS3. Разработка сайтов для любых браузеров и устройств. 2-е издание</li>
-                        </ol>
-                    </div>
-                </div>
-                
-                <div class="skills-wrapper">
-                    <h2 class="section-title" data-cy="hw3-section-title-pre">Мои скиллы</h2>
-    
-                    <div class="skills-block" data-cy="hw3-skills-block-pre">
-                        <div class="skills" data-cy="hw3-skills-pre">
-                            <label class="label" data-cy="hw3-label-pre" for="1">
-                                <input type="checkbox" checked name="" id="1">
-                                HTML5
-                            </label>
-                    
-                            <label class="label" data-cy="hw3-label-pre" for="2">
-                                <input type="checkbox" checked name="" id="2">
-                                CSS3
-                            </label>
-                    
-                            <label class="label" data-cy="hw3-label-pre" for="3">
-                                <input type="checkbox" name="" id="3">
-                                JavaScript
-                            </label>
-                    
-                            <label class="label" data-cy="hw3-label-pre" for="4">
-                                <input type="checkbox" name="" id="4">
-                                Jquery
-                            </label>
-                    
-                            <label class="label" data-cy="hw3-label-pre" for="5">
-                                <input type="checkbox" name="" id="5">
-                                React
-                            </label>
-                        </div>
-        
-                        <form>
-                            <input class="text-field" data-cy="hw3-text-field-pre" type="text" placeholder="Новый скилл">
-                            <button class="btn" data-cy="hw3-btn-pre">Добавить</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <hr class="line" data-cy="hw3-line-pre">
-    
-            <table data-cy="hw3-about-table-pre" border="1">
-                <tr>
-                    <th>п/п</th>
-                    <th>Наименование</th>
-                    <th>Количество</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Монитор</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Клавиатура</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Мышь</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td colspan="2">Итого:</td>
-                    <td>4</td>
-                </tr>
-            </table>
-        </div>
-    </section>
-
-    <footer data-cy="hw3-footer-pre">
-        <a class="footer-link" data-cy="hw3-footer-link-pre" href="https://it-incubator.io/">it-incubator</a>
-    </footer>
-</body>
-</html> -->
