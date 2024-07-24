@@ -17,7 +17,8 @@ let isAccess
 
 // your code
 
-if(!isAdmin && hasSpecialPermission){
+isAdmin = true
+if(isAdmin && hasSpecialPermission){
     isAccess = true
 }
 
@@ -25,12 +26,15 @@ if(!isVerifiedUser && !hasSpecialPermission) {
     isAccess = false
 }
 
-if(isVerifiedUser && !hasTemporaryPass) {
+hasTemporaryPass = true
+if(isVerifiedUser && hasTemporaryPass) {
     isAccess = true
 }
 
-if(!isVerifiedUser && !hasSpecialPermission && hasTemporaryPass){
+hasTemporaryPass = false
+hasSpecialPermission = false
+if(isVerifiedUser && hasSpecialPermission && hasTemporaryPass)
     isAccess = false
-}
+
 
 
