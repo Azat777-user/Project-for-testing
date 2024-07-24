@@ -20,6 +20,8 @@ let isAccess
 if((!isAdmin || isVerifiedUser) && (hasSpecialPermission || !hasTemporaryPass)){
     alert("Доступ разрешен!")
     isAccess = true
+}else {
+    alert("Доступ запрещен!")
 }
 
 
