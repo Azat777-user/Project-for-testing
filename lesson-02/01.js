@@ -8,18 +8,22 @@
 */
 
 // тестовые данные (значения можно менять)
-const isAdmin = "Administrator"
-const isVerifiedUser = "Verified user"
-const hasSpecialPermission = "yes"
-const hasTemporaryPass = "no"
+const isAdmin = true
+const isVerifiedUser = true
+const hasSpecialPermission = true
+const hasTemporaryPass = false
 
 let isAccess
 
 // your code
 
 debugger
+let admn1 = (isAdmin && hasSpecialPermission) 
+let admn2 = (isVerifiedUser && hasSpecialPermission)
+let admn3 = (isVerifiedUser && !hasTemporaryPass)
+let admn4 = (isVerifiedUser && (!hasSpecialPermission && hasTemporaryPass))
 
-if(isAdmin == "Administrator" && hasSpecialPermission == "yes") isAccess = true
-if(isVerifiedUser !== "" && hasSpecialPermission !== "") isAccess = false
-if(isVerifiedUser == "Verified user" && hasSpecialPermission == "yes") isAccess = true
-if(isVerifiedUser == "Verified user" || (hasSpecialPermission !=="" && hasTemporaryPass !=="")) isAccess = false
+if(isAdmin && hasSpecialPermission) isAccess = true
+if(!isVerifiedUser && !hasSpecialPermission) isAccess = false
+if(isVerifiedUser && !hasTemporaryPass) isAccess = true
+if(isVerifiedUser && (!hasSpecialPermission && hasTemporaryPass)) isAccess = false
