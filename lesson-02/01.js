@@ -18,10 +18,9 @@ let isAccess
 // your code
 
 if((!isAdmin || isVerifiedUser) && (hasSpecialPermission || !hasTemporaryPass)){
-    alert("Доступ разрешен!")
     isAccess = true
 }else {
-    alert("Доступ запрещен!")
+    isAccess = false
 }
 
 
