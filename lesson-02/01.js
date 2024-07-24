@@ -18,6 +18,6 @@ let isAccess
 // your code
 
 if(!isAdmin && hasSpecialPermission) isAccess = true
-if(isVerifiedUser && hasSpecialPermission) isAccess = false
+if(!isVerifiedUser && !hasSpecialPermission) isAccess = false
 if(isVerifiedUser && !hasSpecialPermission) isAccess = true
 if(isVerifiedUser && (!hasSpecialPermission && hasTemporaryPass)) isAccess = false
