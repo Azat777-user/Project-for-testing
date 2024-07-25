@@ -23,7 +23,12 @@ let admn2 = (isVerifiedUser && hasSpecialPermission)
 let admn3 = (isVerifiedUser && !hasTemporaryPass)
 let admn4 = (isVerifiedUser && (!hasSpecialPermission && hasTemporaryPass))
 
-if(isAdmin && hasSpecialPermission) isAccess = true
-if(!isVerifiedUser && !hasSpecialPermission) isAccess = false
-if(isVerifiedUser && !hasTemporaryPass) isAccess = true
-if(isVerifiedUser && (!hasSpecialPermission && hasTemporaryPass)) isAccess = false
+// if(isAdmin && hasSpecialPermission) isAccess = true
+// if(!isVerifiedUser && !hasSpecialPermission) isAccess = false
+// if(isVerifiedUser && !hasTemporaryPass) isAccess = true
+// if(isVerifiedUser && (hasSpecialPermission && !hasTemporaryPass)) isAccess = false
+
+if((isAdmin && hasSpecialPermission) || (!isVerifiedUser && hasTemporaryPass)) isAccess = true
+if((!isAdmin && !hasSpecialPermission) || (!isVerifiedUser && hasTemporaryPass)) isAccess = false
+if((!isAdmin && !hasSpecialPermission) || (isVerifiedUser && !hasTemporaryPass)) isAccess = true
+if((!isAdmin && !hasSpecialPermission) || (isVerifiedUser && hasTemporaryPass)) isAccess = false
