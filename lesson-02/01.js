@@ -24,7 +24,7 @@ let admn5 = ((!isAdmin && !hasSpecialPermission) || (isVerifiedUser && !hasTempo
 
 if((isAdmin && hasSpecialPermission) || (!isVerifiedUser && hasTemporaryPass)) isAccess = true
 if((!isAdmin && !hasSpecialPermission) || (!isVerifiedUser && hasTemporaryPass)) isAccess = false
-if((isAdmin && hasSpecialPermission) || (isVerifiedUser && !hasTemporaryPass)) isAccess = true
+if((isAdmin && isVerifiedUser) || (hasSpecialPermission && !hasTemporaryPass)) isAccess = true
 if((!isAdmin && !hasSpecialPermission) || (isVerifiedUser && hasTemporaryPass)) isAccess = false
 
 // if(isAdmin && hasSpecialPermission) isAccess = true
