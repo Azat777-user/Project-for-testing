@@ -14,9 +14,7 @@ const hasSpecialPermission = true
 const hasTemporaryPass = false
 
 let isAccess
-
 // your code
-
 debugger
 let admn1 = (isAdmin && hasSpecialPermission) 
 let admn2 = (isVerifiedUser && hasSpecialPermission)
@@ -24,12 +22,17 @@ let admn3 = (isVerifiedUser && !hasTemporaryPass)
 let admn4 = (isVerifiedUser && (!hasSpecialPermission && hasTemporaryPass))
 let admn5 = ((!isAdmin && !hasSpecialPermission) || (isVerifiedUser && !hasTemporaryPass)) 
 
+if((isAdmin && hasSpecialPermission) || (!isVerifiedUser && hasTemporaryPass)) isAccess = true
+if((!isAdmin && !hasSpecialPermission) || (!isVerifiedUser && hasTemporaryPass)) isAccess = false
+if((isAdmin || hasSpecialPermission) && (isVerifiedUser || hasTemporaryPass)) 
+    {
+        isAccess = true
+    } else {
+        isAccess = false
+    }
+if((!isAdmin && !hasSpecialPermission) || (isVerifiedUser && hasTemporaryPass)) isAccess = false
+
 // if(isAdmin && hasSpecialPermission) isAccess = true
 // if(!isVerifiedUser && !hasSpecialPermission) isAccess = false
 // if(isVerifiedUser && !hasTemporaryPass) isAccess = true
 // if(isVerifiedUser && (hasSpecialPermission && !hasTemporaryPass)) isAccess = false
-
-if((isAdmin && hasSpecialPermission) || (!isVerifiedUser && hasTemporaryPass)) isAccess = true
-if((!isAdmin && !hasSpecialPermission) || (!isVerifiedUser && hasTemporaryPass)) isAccess = false
-if((!isAdmin && !hasSpecialPermission) || (isVerifiedUser && !hasTemporaryPass)) isAccess = true
-if((!isAdmin && !hasSpecialPermission) || (isVerifiedUser && hasTemporaryPass)) isAccess = false
