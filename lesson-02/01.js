@@ -21,7 +21,7 @@ debugger
 
 let isUserAutorized = ((isAdmin || isVerifiedUser) && (hasSpecialPermission ||hasTemporaryPass)) 
 
-isAccess = isUserAutorized ? true : false
+//isAccess = isUserAutorized ? true : false
 
 // if((isAdmin || isVerifiedUser) && (hasSpecialPermission ||hasTemporaryPass)) 
 // { 
