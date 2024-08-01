@@ -17,11 +17,16 @@
 */
 
 function findUniqueElements(array) {
-    let newArray = []
-    for(let i = 0; i < array.length; i++){
-        if(array[i] === array[i + 1]){
-            newArray.push(array[i])
-        }
+    let seen = {};
+    let out = [];
+    let len = a.length;
+    let j = 0;
+    for(let i = 0; i < len; i++) {
+         var item = a[i];
+         if(seen[item] !== 1) {
+               seen[item] = 1;
+               out[j++] = item;
+         }
     }
-    return newArray
+    return out;
 }
