@@ -21,4 +21,3 @@ function doubleEachCharacter(str) {
     }
     return newStr
 }
-doubleEachCharacter(str) 
