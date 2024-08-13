@@ -47,6 +47,7 @@ function onShowPrevBtnClick(){
 
    // disabled prev button if need
   if(currentImageIndex === 0){
+    webTechImage.src = WEB_TECH_IMAGES[WEB_TECH_IMAGES.length-1]
     prev.disabled = true
   }
 }
@@ -58,6 +59,7 @@ function onShowNextBtnClick(){
 
   // disabled next button if need
   if(currentImageIndex === WEB_TECH_IMAGES.length-1){
+    webTechImage.src = WEB_TECH_IMAGES[0]
     next.disabled = true
   }
 }
