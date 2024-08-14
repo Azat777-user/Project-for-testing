@@ -33,7 +33,7 @@ const webTechImage = document.getElementById('web-tech-image')
 
 let currentImageIndex = 0
 webTechImage.src = WEB_TECH_IMAGES[currentImageIndex]
-prev.disabled = true
+
 
 // subscribe to events
 prev.addEventListener('click', onShowPrevBtnClick)
@@ -41,25 +41,19 @@ next.addEventListener('click', onShowNextBtnClick)
 
 // functions definitions
 function onShowPrevBtnClick(){
-  currentImageIndex--
   webTechImage.src = WEB_TECH_IMAGES[currentImageIndex]
-  next.disabled = false
-
-   // disabled prev button if need
+  currentImageIndex--
+  
   if(currentImageIndex === 0){
-    webTechImage.src = WEB_TECH_IMAGES[WEB_TECH_IMAGES.length-1]
-    prev.disabled = true
+    currentImageIndex = WEB_TECH_IMAGES.length
   }
 }
 
 function onShowNextBtnClick(){
-  currentImageIndex++
   webTechImage.src = WEB_TECH_IMAGES[currentImageIndex]
-  prev.disabled = false
+  currentImageIndex++
 
-  // disabled next button if need
-  if(currentImageIndex === WEB_TECH_IMAGES.length-1){
-    webTechImage.src = WEB_TECH_IMAGES[0]
-    next.disabled = true
+  if(currentImageIndex === WEB_TECH_IMAGES.length){
+    currentImageIndex = 0
   }
 }
