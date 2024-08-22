@@ -31,7 +31,7 @@ const webTechImage = document.getElementById('web-tech-image')
 
 
 let currentImageIndex = 0
-webTechImage.src = WEB_TECH_IMAGES[currentImageIndex]
+//webTechImage.src = WEB_TECH_IMAGES[currentImageIndex]
 
 // subscribe to events
 prev.addEventListener('click', onShowPrevBtnClick)
@@ -50,6 +50,7 @@ function onShowPrevBtnClick(){
 }
 
 function onShowNextBtnClick(){
-  webTechImage.src = WEB_TECH_IMAGES[currentImageIndex]
+  
   currentImageIndex < (WEB_TECH_IMAGES.length - 1) ? currentImageIndex++ : currentImageIndex = 0
+  webTechImage.src = WEB_TECH_IMAGES[currentImageIndex]
 }
