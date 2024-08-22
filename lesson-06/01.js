@@ -39,20 +39,17 @@ next.addEventListener('click', onShowNextBtnClick)
 
 // functions definitions
 function onShowPrevBtnClick(){
- //debugger
-  webTechImage.src = WEB_TECH_IMAGES[currentImageIndex]
-  currentImageIndex--
-  
-  if(currentImageIndex === 0){
+  //debugger
+  if(currentImageIndex <= 0){
     currentImageIndex = WEB_TECH_IMAGES.length - 1
   }
+  else {
+    currentImageIndex--
+  }
+  webTechImage.src = WEB_TECH_IMAGES[currentImageIndex]
 }
 
 function onShowNextBtnClick(){
   webTechImage.src = WEB_TECH_IMAGES[currentImageIndex]
-  currentImageIndex++
-
-  if(currentImageIndex === WEB_TECH_IMAGES.length){
-    currentImageIndex = 0
-  }
+  currentImageIndex < (WEB_TECH_IMAGES.length - 1) ? currentImageIndex++ : currentImageIndex = 0
 }
