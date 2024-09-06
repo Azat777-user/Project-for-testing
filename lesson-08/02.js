@@ -59,5 +59,5 @@ startButton.addEventListener('click', () => {
 cancelButton.addEventListener('click', () => {
   // your code
   clearInterval(timerId)
-  countdownDisplay.innerHTML = "Отменено"
+  countdownDisplay.textContent = "Отменено"
 })
