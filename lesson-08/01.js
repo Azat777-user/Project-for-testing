@@ -57,6 +57,7 @@ function updateCartDisplay() {
 
   for (let i = 0; i < cart.length; i++) {
     const petId = cart[i]
+    console.log(cart[i])
     const pet = PETS.find((item) => item.id === petId)
     const petSpanElement = document.createElement('li')
     petSpanElement.classList.add('pet')
@@ -65,25 +66,63 @@ function updateCartDisplay() {
   }
 }
 
-clearCartButton.addEventListener('click', function () {
+clearCartButton.addEventListener('click', function (event) {
   cart.length = 0
   updateCartDisplay()
+  petShop.innerHTML = ''
+  for (let i = 0; i < PETS.length; i++) {
+    const pet = PETS[i]
+  
+    const petButtonElement = document.createElement('button')
+    petButtonElement.classList.add('pet')
+    petButtonElement.id = pet.id
+    petButtonElement.textContent = pet.title
+    petButtonElement.disabled = false
+    
+    petShop.append(petButtonElement)
+  }
+  messageBox.innerHTML = ''
 })
 
 // Твой код:
 
-petShop.addEventListener('click', function(event){
-  
+function addPet(event){
   cart.push(event.target.id)
-  updateCartDisplay()
-  console.log(cart.length)
-  if(cart.length > 2) {
-    console.log(cart.length)
-    messageBox.innerHTML = "<p style='color: red'>Вы не можете добавить более 3 питомцев</p>"
-    this.style.pointerEvents = "none"
+  for(let i = 0; i == 0 && i <= cart.length; i++){
+    //debugger
+    if(cart.includes(cart[i]))  {
+      event.target.disabled = true
+      //alert('Нельзя добавить питомца, так как такой питомец уже в корзине')
+    }
   }
+
+  if(cart.length > 2) {
+    //debugger
+    console.log(cart.length)
+    updateCartDisplay()
+    petShop.innerHTML = ''
+    for (let i = 0; i < PETS.length; i++) {
+      const pet = PETS[i]
+    
+      const petButtonElement = document.createElement('button')
+      petButtonElement.classList.add('pet')
+      petButtonElement.id = pet.id
+      petButtonElement.textContent = pet.title
+      petButtonElement.disabled = true
+      
+      petShop.append(petButtonElement)
+    }
+
+    messageBox.innerHTML = "<p style='color: red'>Вы не можете добавить более 3 питомцев</p>"
+  }
+
+  console.log(event.target)
   
-  console.log(cart)
-  // if(event.target.tagName == 'BUTTON') console.log(event.target)
-})
+  //debugger
+  updateCartDisplay()
+  let existingItem  = cart.filter(item => item === event.target.id)
+
+}
+
+petShop.addEventListener('click', addPet)
 

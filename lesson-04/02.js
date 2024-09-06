@@ -22,8 +22,12 @@
 function findUniqueElements(array) {
     let newArr = []
     for(let i = 0; i < array.length; i++){
-        if(array[i] != newArr[i])
+        if(!newArr.includes(array[i])){
             newArr.push(array[i])
+        }
+            
     }
     return newArr
 }
+[1, 1, 2, 3, 3, 4, 8, 8]
+[1, 2, 3, 4]
