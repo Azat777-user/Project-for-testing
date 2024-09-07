@@ -35,34 +35,29 @@ const startButton = document.getElementById('start')
 const cancelButton = document.getElementById('cancel')
 const countdownDisplay = document.getElementById('countdown')
 
-let isTimerStarted = false
-let timerId
+let count
 
-//cancelButton.disabled = true
-startButton.addEventListener('click', function(){
-  //this.disabled = true
-  //cancelButton.disabled = false
-  let counter = 3
-  // your code
-  countdownDisplay.innerHTML = counter
-  timerId = setInterval(function(){
-    countdownDisplay.innerHTML = Number(countdownDisplay.innerHTML) - 1
-    if(Number(countdownDisplay.innerHTML) === 0 && Number(countdownDisplay.innerHTML) <= 0){
-      this.disabled = false
-      countdownDisplay.innerHTML = "🚀"
-      clearInterval(timerId)
-      cancelButton.disabled = true
-    }
-  }, 1000)
-  console.log(timerId)
-})
+function go(){
+  window.timerId = window.setInterval(timer, 1000);
+  this.disabled = true;
+  cancelButton.disabled = false;
+}
+//Останавливает таймер
+function stop(){
+  window.clearInterval(window.timerId);
+  startButton.disabled = false;
+  this.disabled = true;
+}
+function timer(){
+  count = +countdownDisplay.innerHTML - 1
+  console.log(count)
+  countdownDisplay.innerHTML = count 
+  if(count <= 0){
+    countdownDisplay.innerHTML = '🚀'
+    window.clearInterval(window.timerId);
+  }
+}
 
 
-
-cancelButton.addEventListener('click', function(){
-  // your code
-  //this.disabled = true
-  //startButton.disabled = false
-  clearInterval(timerId)
-  countdownDisplay.textContent = "Отменено"
-})
+startButton.addEventListener('click', go)
+cancelButton.addEventListener('click', stop)
