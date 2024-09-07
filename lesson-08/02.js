@@ -35,24 +35,30 @@ const startButton = document.getElementById('start')
 const cancelButton = document.getElementById('cancel')
 const countdownDisplay = document.getElementById('countdown')
 
-let count
+let count = 3
 
+cancelButton.disabled = true
+
+// запуск таймера
 function go(){
+  countdownDisplay.innerHTML = count
   window.timerId = window.setInterval(timer, 1000);
   this.disabled = true;
   cancelButton.disabled = false;
 }
+
 //Останавливает таймер
 function stop(){
   window.clearInterval(window.timerId);
+  countdownDisplay.innerHTML = 'Отменено'
   startButton.disabled = false;
   this.disabled = true;
 }
+
 function timer(){
-  count = +countdownDisplay.innerHTML - 1
-  console.log(count)
-  countdownDisplay.innerHTML = count 
-  if(count <= 0){
+  countdownDisplay.innerHTML = +countdownDisplay.innerHTML - 1
+  console.log(+countdownDisplay.innerHTML)
+  if(+countdownDisplay.innerHTML <= 0){
     countdownDisplay.innerHTML = '🚀'
     window.clearInterval(window.timerId);
   }
