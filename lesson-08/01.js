@@ -85,20 +85,16 @@ clearCartButton.addEventListener('click', function (event) {
 })
 
 // Твой код:
-
-
 function addPet(event){
   cart.push(event.target.id)
   for(let i = 0; i == 0 && i <= cart.length; i++){
     debugger
     if(cart.includes(cart[i]))  {
       event.target.disabled = true
-      //alert('Нельзя добавить питомца, так как такой питомец уже в корзине')
     }
   }
 
   if(cart.length > 3) {
-    //debugger
     console.log(cart.length)
     messageBox.innerHTML = "<p style='color: red'>Вы не можете добавить более 3 питомцев</p>" 
     return false
