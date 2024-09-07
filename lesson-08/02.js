@@ -60,10 +60,11 @@ function timer(){
   console.log(+countdownDisplay.innerHTML)
   if(+countdownDisplay.innerHTML <= 0){
     countdownDisplay.innerHTML = '🚀'
+    startButton.disabled = false
+    cancelButton.disabled = true
     window.clearInterval(window.timerId);
   }
 }
-
 
 startButton.addEventListener('click', go)
 cancelButton.addEventListener('click', stop)
