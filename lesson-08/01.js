@@ -88,7 +88,6 @@ clearCartButton.addEventListener('click', function (event) {
 function addPet(event){
   cart.push(event.target.id)
   for(let i = 0; i == 0 && i <= cart.length; i++){
-    debugger
     if(cart.includes(cart[i]))  {
       event.target.disabled = true
     }

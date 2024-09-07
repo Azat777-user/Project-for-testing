@@ -38,10 +38,10 @@ const countdownDisplay = document.getElementById('countdown')
 let isTimerStarted = false
 let timerId
 
-cancelButton.disabled = true
+//cancelButton.disabled = true
 startButton.addEventListener('click', function(){
-  this.disabled = true
-  cancelButton.disabled = false
+  //this.disabled = true
+  //cancelButton.disabled = false
   let counter = 3
   // your code
   countdownDisplay.innerHTML = counter
@@ -50,8 +50,8 @@ startButton.addEventListener('click', function(){
     if(Number(countdownDisplay.innerHTML) === 0 && Number(countdownDisplay.innerHTML) <= 0){
       this.disabled = false
       countdownDisplay.innerHTML = "🚀"
-      cancelButton.disabled = true
       clearInterval(timerId)
+      cancelButton.disabled = true
     }
   }, 1000)
   console.log(timerId)
@@ -61,8 +61,8 @@ startButton.addEventListener('click', function(){
 
 cancelButton.addEventListener('click', function(){
   // your code
-  this.disabled = true
-  startButton.disabled = false
+  //this.disabled = true
+  //startButton.disabled = false
   clearInterval(timerId)
   countdownDisplay.textContent = "Отменено"
 })
