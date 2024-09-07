@@ -38,6 +38,7 @@ const countdownDisplay = document.getElementById('countdown')
 let isTimerStarted = false
 let timerId
 
+cancelButton.disabled = true
 startButton.addEventListener('click', () => {
   cancelButton.disabled = false
   let counter = 3
@@ -49,6 +50,9 @@ startButton.addEventListener('click', () => {
       countdownDisplay.innerHTML = "🚀"
       cancelButton.disabled = true
       clearInterval(timerId)
+    }
+    if (Number(countdownDisplay.innerHTML) <= 0) {
+      clearInterval(timerId);
     }
   }, 1000)
   console.log(timerId)
