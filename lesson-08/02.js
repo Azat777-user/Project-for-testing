@@ -45,15 +45,13 @@ startButton.addEventListener('click', function(){
   let counter = 3
   // your code
   countdownDisplay.innerHTML = counter
-  timerId = setTimeout(function(){
+  timerId = setInterval(function(){
     countdownDisplay.innerHTML = Number(countdownDisplay.innerHTML) - 1
-    if(Number(countdownDisplay.innerHTML) === 0){
+    if(Number(countdownDisplay.innerHTML) === 0 && Number(countdownDisplay.innerHTML) <= 0){
+      this.disabled = false
       countdownDisplay.innerHTML = "🚀"
       cancelButton.disabled = true
-      clearTimeout(timerId)
-    }
-    if (Number(countdownDisplay.innerHTML) <= 0) {
-      clearTimeout(timerId);
+      clearInterval(timerId)
     }
   }, 1000)
   console.log(timerId)
@@ -63,8 +61,8 @@ startButton.addEventListener('click', function(){
 
 cancelButton.addEventListener('click', function(){
   // your code
-  startButton.disabled = false
   this.disabled = true
+  startButton.disabled = false
   clearInterval(timerId)
   countdownDisplay.textContent = "Отменено"
 })
