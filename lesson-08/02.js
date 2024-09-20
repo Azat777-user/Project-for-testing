@@ -37,22 +37,27 @@ const countdownDisplay = document.getElementById('countdown')
 
 let count = 3
 
-cancelButton.disabled = true
+//cancelButton.disabled = true
 
 // запуск таймера
 function go(){
+  window.clearInterval(window.timerId);
+
+
+
   countdownDisplay.innerHTML = count
   window.timerId = window.setInterval(timer, 1000);
-  this.disabled = true;
-  cancelButton.disabled = false;
+  console.log(timerId)
+  //this.disabled = true;
+  //cancelButton.disabled = false;
 }
 
 //Останавливает таймер
 function stop(){
   window.clearInterval(window.timerId);
   countdownDisplay.innerHTML = 'Отменено'
-  startButton.disabled = false;
-  this.disabled = true;
+  //startButton.disabled = false;
+  //this.disabled = true;
 }
 
 function timer(){
@@ -60,8 +65,8 @@ function timer(){
   console.log(+countdownDisplay.innerHTML)
   if(+countdownDisplay.innerHTML <= 0){
     countdownDisplay.innerHTML = '🚀'
-    startButton.disabled = false
-    cancelButton.disabled = true
+   // startButton.disabled = false
+   // cancelButton.disabled = true
     window.clearInterval(window.timerId);
   }
 }
