@@ -109,7 +109,7 @@ const controller = {
   // your code
   deleteTask(taskId){
     model.deleteTask(taskId)
-    view.displayMessage('Фильм удален успешно!')
+    view.displayMessage('Фильм успешно удалён!')
   }
 }
 
