@@ -36,15 +36,18 @@ const cancelButton = document.getElementById('cancel')
 const countdownDisplay = document.getElementById('countdown')
 
 let count = 3
+let isTimerStarted = false
 
 //cancelButton.disabled = true
 
 // запуск таймера
 function go(){
+  if(isTimerStarted){
+    return
+  }
+
+  isTimerStarted = true
   window.clearInterval(window.timerId);
-
-
-
   countdownDisplay.innerHTML = count
   window.timerId = window.setInterval(timer, 1000);
   console.log(timerId)
@@ -54,8 +57,12 @@ function go(){
 
 //Останавливает таймер
 function stop(){
+  if(!isTimerStarted){
+    return
+  }
   window.clearInterval(window.timerId);
   countdownDisplay.innerHTML = 'Отменено'
+  isTimerStarted = false
   //startButton.disabled = false;
   //this.disabled = true;
 }
@@ -68,6 +75,7 @@ function timer(){
    // startButton.disabled = false
    // cancelButton.disabled = true
     window.clearInterval(window.timerId);
+    isTimerStarted = false
   }
 }
 
